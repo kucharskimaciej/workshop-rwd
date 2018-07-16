@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "start": "gitbook serve",
+    "build": "gitbook build"
+  },
+  "dependencies": {
+    "gitbook": "^3.2.3",
+    "gitbook-plugin-codepen": "0.1.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.2.0",
+    "gitbook-cli": "^2.3.2"
+  }
+}
