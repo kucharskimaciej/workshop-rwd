@@ -1,0 +1,10 @@
+{
+  "title": "Szkolenie HTML/CSS/RWD - Devmeetings",
+  "author": "Maciej Kucharski",
+  "plugins": ["codepen"],
+  "pluginsConfig": {
+    "codepen": {
+      "height": 400
+    }
+  }
+}
