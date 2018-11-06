@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="mobile-first.html" />
+    <link rel="next" href="layouts.html" />
     
     
     <link rel="prev" href="introduction.html" />
@@ -291,22 +291,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.10" data-path="../css/inspector.html">
+        <li class="chapter " data-level="1.3.10" data-path="../css/tasks.html">
             
-                <a href="../css/inspector.html">
-            
-                    
-                    Chrome Inspector
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.11" data-path="../css/tasks.md">
-            
-                <span>
+                <a href="../css/tasks.html">
             
                     
                     Tasks
@@ -362,7 +349,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="mobile-first.html">
+        <li class="chapter " data-level="1.4.3" data-path="layouts.html">
+            
+                <a href="layouts.html">
+            
+                    
+                    Fluid layouts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="mobile-first.html">
             
                 <a href="mobile-first.html">
             
@@ -375,7 +375,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="images.html">
+        <li class="chapter " data-level="1.4.5" data-path="images.html">
             
                 <a href="images.html">
             
@@ -388,7 +388,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="tables.html">
+        <li class="chapter " data-level="1.4.6" data-path="tables.html">
             
                 <a href="tables.html">
             
@@ -401,7 +401,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="tasks.html">
+        <li class="chapter " data-level="1.4.7" data-path="performance.html">
+            
+                <a href="performance.html">
+            
+                    
+                    Measuring performance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="tasks.html">
             
                 <a href="tasks.html">
             
@@ -595,11 +608,16 @@
                                 
                                 <h1 id="media-queries">Media queries</h1>
 <p>Media queries let you apply different styles to an element based on device size, orientation, type, and pixel density.
-The media query is, in essence, an <code>if</code> statement about the browser/device properties: 
+The media query is, in essence, an <code>if</code> statement about the browser/device properties:
 if the statement evaluates to <code>true</code>, the styles inside will be applied:</p>
 <pre><code class="lang-scss">@<span class="hljs-keyword">media</span> screen and (min-width: 600px) {
   <span class="hljs-comment">// styles to apply</span>
 }
+</code></pre>
+<h3 id="the-viewport-meta-tag">The viewport meta tag</h3>
+<p>Before media queries can be used, the browser needs to know how to control the page dimensions and scaling.
+The tag&apos;s content may contain a number of properties, but using most of them is not recommended. Here&apos;s the standard version for a responsive page:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width,initial-scale=1&quot;</span>&gt;</span>
 </code></pre>
 <h3 id="media-type">Media type</h3>
 <pre><code class="lang-scss">@<span class="hljs-keyword">media</span> print { ... }
@@ -614,7 +632,7 @@ if the statement evaluates to <code>true</code>, the styles inside will be appli
 <h3 id="dimensions">Dimensions</h3>
 <pre><code class="lang-scss">@<span class="hljs-keyword">media</span> (min-width: 640px) { ... }
 </code></pre>
-<p>Describe the size of the browser window: <code>width</code>, <code>height</code>. 
+<p>Describe the size of the browser window: <code>width</code>, <code>height</code>.
 Can be modified with <code>min-</code> and <code>max-</code> prefixes (<code>min-width</code>, <code>min-height</code>, <code>max-width</code>, <code>max-height</code>)</p>
 <h3 id="orientation-and-aspect-ratio">Orientation and aspect ratio</h3>
 <pre><code class="lang-scss">@<span class="hljs-keyword">media</span> (orientation: landscape) { ... }
@@ -628,6 +646,7 @@ Can be modified with <code>min-</code> and <code>max-</code> prefixes (<code>min
 </ul>
 <h2 id="read-more">Read more</h2>
 <ul>
+<li><a href="https://developers.google.com/web/fundamentals/design-and-ux/responsive/" target="_blank">Responsive Web Design Basics</a></li>
 <li><a href="https://css-tricks.com/css-media-queries/" target="_blank">CSS Media Queries &amp; Using Available Space | CSS-Tricks</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries" target="_blank">Using media queries</a></li>
 <li><a href="https://mediaqueri.es/" target="_blank">Media Queries</a></li>
@@ -666,7 +685,7 @@ Can be modified with <code>min-</code> and <code>max-</code> prefixes (<code>min
                 </a>
                 
                 
-                <a href="mobile-first.html" class="navigation navigation-next " aria-label="Next page: Mobile first">
+                <a href="layouts.html" class="navigation navigation-next " aria-label="Next page: Fluid layouts">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -677,7 +696,7 @@ Can be modified with <code>min-</code> and <code>max-</code> prefixes (<code>min
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Media queries","level":"1.4.2","depth":2,"next":{"title":"Mobile first","level":"1.4.3","depth":2,"path":"rwd/mobile-first.md","ref":"./rwd/mobile-first.md","articles":[]},"previous":{"title":"Responsive Web Design","level":"1.4.1","depth":2,"path":"rwd/introduction.md","ref":"./rwd/introduction.md","articles":[]},"dir":"ltr"},"config":{"plugins":["codepen"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"codepen":{"height":400},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Maciej Kucharski","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Szkolenie HTML/CSS/RWD - Devmeetings","gitbook":"*"},"file":{"path":"rwd/media-queries.md","mtime":"2018-07-15T13:51:26.577Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-16T16:33:53.813Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Media queries","level":"1.4.2","depth":2,"next":{"title":"Fluid layouts","level":"1.4.3","depth":2,"path":"rwd/layouts.md","ref":"./rwd/layouts.md","articles":[]},"previous":{"title":"Responsive Web Design","level":"1.4.1","depth":2,"path":"rwd/introduction.md","ref":"./rwd/introduction.md","articles":[]},"dir":"ltr"},"config":{"plugins":["codepen"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"codepen":{"height":400},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Maciej Kucharski","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Szkolenie HTML/CSS/RWD - Devmeetings","gitbook":"*"},"file":{"path":"rwd/media-queries.md","mtime":"2018-11-06T01:10:40.168Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-06T12:27:39.887Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Specificity · Szkolenie HTML/CSS/RWD - Devmeetings</title>
+        <title>Tasks · Szkolenie HTML/CSS/RWD - Devmeetings</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="box-model.html" />
+    <link rel="next" href="../rwd/" />
     
     
-    <link rel="prev" href="inheritance.html" />
+    <link rel="prev" href="bem.html" />
     
 
     </head>
@@ -213,7 +213,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.4" data-path="specificity.html">
+        <li class="chapter " data-level="1.3.4" data-path="specificity.html">
             
                 <a href="specificity.html">
             
@@ -291,7 +291,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.10" data-path="tasks.html">
+        <li class="chapter active" data-level="1.3.10" data-path="tasks.html">
             
                 <a href="tasks.html">
             
@@ -591,7 +591,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Specificity</a>
+        <a href=".." >Tasks</a>
     </h1>
 </div>
 
@@ -606,64 +606,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="selector-specificity">Selector specificity</h1>
-<p>Specificity is a way the browser decides which properties to use for styling when more than one selector applies to the given element .</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;title&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;page-title&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;font-size: 16px;&quot;</span>&gt;</span>Hello!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-</code></pre>
-<pre><code class="lang-css"><span class="hljs-selector-id">#title</span> {
-    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">24px</span>;
-}
-
-<span class="hljs-selector-class">.page-title</span> {
-    <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">300</span>;
-}
-
-<span class="hljs-selector-tag">h1</span> {
-    <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">700</span>;
-}
-</code></pre>
-<h2 id="how-to-calculate-specificity">How to calculate specificity</h2>
-<p>Specificity can be written as set of four numbers representing respectively:</p>
-<ul>
-<li>inline styles applied to the element (1 or 0)</li>
-<li>number of id attributes in the selector</li>
-<li>number of (pseudo-)classes in the selector</li>
-<li>number of tags (including pseudoelements) in the selector</li>
-</ul>
-<p>Examples:</p>
-<ul>
-<li><code>#main</code> - has specificity of <code>0, 1, 0, 0</code></li>
-<li><code>.sidebar</code> - has specificity of <code>0, 0, 1, 0</code></li>
-<li><code>a:hover</code> - has specificity of <code>0, 0, 1, 1</code></li>
-</ul>
-<p>The numbers are then compared in order and the higher one wins.</p>
-<h2 id="overriding-styles">Overriding styles</h2>
-<p>Styles can be overridden by either creating a more specific selector:</p>
-<pre><code class="lang-scss"><span class="hljs-selector-tag">article</span> <span class="hljs-selector-tag">p</span> { <span class="hljs-comment">/* specificity 0, 0, 0, 2 */</span>
-    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">12px</span>;
-    <span class="hljs-attribute">font-weight</span>: normal;
-}
-
-<span class="hljs-selector-tag">article</span> <span class="hljs-selector-tag">p</span><span class="hljs-selector-class">.featured</span> { <span class="hljs-comment">/* specificity 0, 0, 1, 2 */</span>
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">14px</span>;
-  <span class="hljs-attribute">font-weight</span>: bold;
-}
-</code></pre>
-<p>or using the <code>!important</code> keyword (bad practice):</p>
-<pre><code class="lang-css"><span class="hljs-comment">/* specificity 0, 1, 3, 2 */</span>
-<span class="hljs-selector-id">#page</span><span class="hljs-selector-class">.page--main</span><span class="hljs-selector-class">.page--default</span> <span class="hljs-selector-tag">article</span> <span class="hljs-selector-tag">p</span><span class="hljs-selector-class">.featured</span> { 
-    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">18px</span>;
-}
-
-<span class="hljs-selector-tag">p</span> { <span class="hljs-comment">/* specificity 0, 0, 0, 1 */</span>
-    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">12px</span> <span class="hljs-meta">!important</span>;
-}
-</code></pre>
-<h2 id="further-reading">Further reading</h2>
-<ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance" target="_blank">Cascade and inheritance - Learn web development | MDN</a></li>
-<li><a href="https://pawelgrzybek.com/css-specificity-explained/" target="_blank">CSS Specificity explained | pawelgrzybek.com</a></li>
-</ul>
+                                <h1 id="tasks">Tasks</h1>
+<h4 id="1-project-create-the-following-landing-page-layout">1. Project: create the following landing page layout</h4>
+<p><strong>Hint</strong> Use <a href="https://placeimg.com/" target="_blank">PlaceIMG</a> or similar service for images</p>
+<h4 id="2-optional-make-the-header-scroll-with-page">2. <em>(optional)</em> Make the header scroll with page</h4>
+<h4 id="3-optional-add-item-details-page">3. <em>(optional)</em> Add item details page</h4>
+<h4 id="4-optional-add-cart-page">4. <em>(optional)</em> Add cart page</h4>
+<h4 id="5-optional-get-froggy-to-level-24-">5. <em>(optional)</em> Get <a href="https://flexboxfroggy.com/" target="_blank">Froggy</a> to level 24 :)</h4>
 
                                 
                                 </section>
@@ -691,12 +640,12 @@
 
             
                 
-                <a href="inheritance.html" class="navigation navigation-prev " aria-label="Previous page: Inheritance">
+                <a href="bem.html" class="navigation navigation-prev " aria-label="Previous page: Class naming conventions: BEM">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="box-model.html" class="navigation navigation-next " aria-label="Next page: Box model">
+                <a href="../rwd/" class="navigation navigation-next " aria-label="Next page: RWD">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -707,7 +656,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Specificity","level":"1.3.4","depth":2,"next":{"title":"Box model","level":"1.3.5","depth":2,"path":"css/box-model.md","ref":"./css/box-model.md","articles":[]},"previous":{"title":"Inheritance","level":"1.3.3","depth":2,"path":"css/inheritance.md","ref":"./css/inheritance.md","articles":[]},"dir":"ltr"},"config":{"plugins":["codepen"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"codepen":{"height":400},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Maciej Kucharski","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Szkolenie HTML/CSS/RWD - Devmeetings","gitbook":"*"},"file":{"path":"css/specificity.md","mtime":"2018-07-12T17:01:18.573Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-06T12:27:39.887Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Tasks","level":"1.3.10","depth":2,"next":{"title":"RWD","level":"1.4","depth":1,"path":"rwd/README.md","ref":"./rwd/README.md","articles":[{"title":"Responsive Web Design","level":"1.4.1","depth":2,"path":"rwd/introduction.md","ref":"./rwd/introduction.md","articles":[]},{"title":"Media queries","level":"1.4.2","depth":2,"path":"rwd/media-queries.md","ref":"./rwd/media-queries.md","articles":[]},{"title":"Fluid layouts","level":"1.4.3","depth":2,"path":"rwd/layouts.md","ref":"./rwd/layouts.md","articles":[]},{"title":"Mobile first","level":"1.4.4","depth":2,"path":"rwd/mobile-first.md","ref":"./rwd/mobile-first.md","articles":[]},{"title":"Responsive images","level":"1.4.5","depth":2,"path":"rwd/images.md","ref":"./rwd/images.md","articles":[]},{"title":"Responsive tables","level":"1.4.6","depth":2,"path":"rwd/tables.md","ref":"./rwd/tables.md","articles":[]},{"title":"Measuring performance","level":"1.4.7","depth":2,"path":"rwd/performance.md","ref":"./rwd/performance.md","articles":[]},{"title":"Tasks","level":"1.4.8","depth":2,"path":"rwd/tasks.md","ref":"./rwd/tasks.md","articles":[]}]},"previous":{"title":"Class naming conventions: BEM","level":"1.3.9","depth":2,"path":"css/bem.md","ref":"./css/bem.md","articles":[]},"dir":"ltr"},"config":{"plugins":["codepen"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"codepen":{"height":400},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Maciej Kucharski","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Szkolenie HTML/CSS/RWD - Devmeetings","gitbook":"*"},"file":{"path":"css/tasks.md","mtime":"2018-11-05T17:00:50.041Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-06T12:27:39.887Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

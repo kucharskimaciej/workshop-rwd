@@ -291,22 +291,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.10" data-path="inspector.html">
+        <li class="chapter " data-level="1.3.10" data-path="tasks.html">
             
-                <a href="inspector.html">
-            
-                    
-                    Chrome Inspector
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.11" data-path="tasks.md">
-            
-                <span>
+                <a href="tasks.html">
             
                     
                     Tasks
@@ -362,7 +349,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../rwd/mobile-first.html">
+        <li class="chapter " data-level="1.4.3" data-path="../rwd/layouts.html">
+            
+                <a href="../rwd/layouts.html">
+            
+                    
+                    Fluid layouts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../rwd/mobile-first.html">
             
                 <a href="../rwd/mobile-first.html">
             
@@ -375,7 +375,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="../rwd/images.html">
+        <li class="chapter " data-level="1.4.5" data-path="../rwd/images.html">
             
                 <a href="../rwd/images.html">
             
@@ -388,7 +388,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="../rwd/tables.html">
+        <li class="chapter " data-level="1.4.6" data-path="../rwd/tables.html">
             
                 <a href="../rwd/tables.html">
             
@@ -401,7 +401,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="../rwd/tasks.html">
+        <li class="chapter " data-level="1.4.7" data-path="../rwd/performance.html">
+            
+                <a href="../rwd/performance.html">
+            
+                    
+                    Measuring performance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../rwd/tasks.html">
             
                 <a href="../rwd/tasks.html">
             
@@ -595,19 +608,19 @@
                                 
                                 <h1 id="floats">Floats</h1>
 <p>Float is a positioning property, originally intended for describing the flow of text around an image:</p>
-<p>// codepen text and image</p>
+<p></p><p data-height="400" data-theme-id="0" data-slug-hash="bQNQYp" data-default-tab="result" data-user="maciej-kucharski" class="codepen">See the Pen <a href="http://codepen.io/maciej-kucharski/pen/bQNQYp/" target="_blank"></a> by maciej-kucharski (<a href="http://codepen.io/maciej-kucharski" target="_blank">@maciej-kucharski</a>) on <a href="http://codepen.io" target="_blank">CodePen</a>.</p><p></p>
 <p>While now replaced by <code>flexbox</code>, the <code>float</code>s were used to create a majority of layouts for the past 10 years.</p>
 <h2 id="normal-document-flow">Normal document flow</h2>
-<p>For the purpose of explaining the flow: elements are either <strong>block-level</strong> or <strong>inline-level</strong>. 
-In normal flow, block-level elements are displayed vertically, and inline-level elements are displayed side-by-side. </p>
+<p>For the purpose of explaining the flow: elements are either <strong>block-level</strong> or <strong>inline-level</strong>.
+In normal flow, block-level elements are displayed vertically, and inline-level elements are displayed side-by-side.</p>
 <h2 id="floating-elements">Floating elements</h2>
 <p>A floated element is taken out of a normal flow and moves left or right until it touches the edge of its container or another floated element:</p>
-<p>// codepen 3 images, 2 left one right</p>
+<p></p><p data-height="400" data-theme-id="0" data-slug-hash="aQzXbd" data-default-tab="result" data-user="maciej-kucharski" class="codepen">See the Pen <a href="http://codepen.io/maciej-kucharski/pen/aQzXbd/" target="_blank"></a> by maciej-kucharski (<a href="http://codepen.io/maciej-kucharski" target="_blank">@maciej-kucharski</a>) on <a href="http://codepen.io" target="_blank">CodePen</a>.</p><p></p>
 <h2 id="clearing-floats">Clearing floats</h2>
 <p>Clearing floats is a way to force a floated element to move below any other floated elements:</p>
-<p>// codepen, text, 2 images right, one under another</p>
+<p></p><p data-height="400" data-theme-id="0" data-slug-hash="RqNOmg" data-default-tab="result" data-user="maciej-kucharski" class="codepen">See the Pen <a href="http://codepen.io/maciej-kucharski/pen/RqNOmg/" target="_blank"></a> by maciej-kucharski (<a href="http://codepen.io/maciej-kucharski" target="_blank">@maciej-kucharski</a>) on <a href="http://codepen.io" target="_blank">CodePen</a>.</p><p></p>
 <h2 id="container-collapse">Container collapse</h2>
-<p>While floated elements are somewhat in the document flow, they don&apos;t count towards the container height. 
+<p>While floated elements are somewhat in the document flow, they don&apos;t count towards the container height.
 This is especially important when the container only has floated children.</p>
 <pre><code class="lang-scss"><span class="hljs-selector-class">.clearfix</span>::after {
   <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;
@@ -664,7 +677,7 @@ This is especially important when the container only has floated children.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Floats","level":"1.3.6","depth":2,"next":{"title":"Flex","level":"1.3.7","depth":2,"path":"css/flexbox.md","ref":"./css/flexbox.md","articles":[]},"previous":{"title":"Box model","level":"1.3.5","depth":2,"path":"css/box-model.md","ref":"./css/box-model.md","articles":[]},"dir":"ltr"},"config":{"plugins":["codepen"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"codepen":{"height":400},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Maciej Kucharski","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Szkolenie HTML/CSS/RWD - Devmeetings","gitbook":"*"},"file":{"path":"css/floats.md","mtime":"2018-07-16T09:03:52.008Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-16T16:33:53.813Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Floats","level":"1.3.6","depth":2,"next":{"title":"Flex","level":"1.3.7","depth":2,"path":"css/flexbox.md","ref":"./css/flexbox.md","articles":[]},"previous":{"title":"Box model","level":"1.3.5","depth":2,"path":"css/box-model.md","ref":"./css/box-model.md","articles":[]},"dir":"ltr"},"config":{"plugins":["codepen"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"codepen":{"height":400},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Maciej Kucharski","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Szkolenie HTML/CSS/RWD - Devmeetings","gitbook":"*"},"file":{"path":"css/floats.md","mtime":"2018-11-05T14:39:41.278Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-06T12:27:39.887Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
