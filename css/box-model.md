@@ -10,6 +10,8 @@ Every piece of content on the website is rendered as a rectangle with 5 properti
 
 Combined, those properties define how an element is presented to the user.
 
+[](codepen://maciej-kucharski/ZmQLbY)
+
 ## Width and height
 
 ```css

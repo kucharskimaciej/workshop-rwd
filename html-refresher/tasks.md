@@ -1,5 +1,6 @@
-# Zadania
-Przygotowany ZIP z prostą stroną — same divy, jakiś formularz
+# Tasks
 
-1. Zamień divy na odpowiednie elementy HTML5
-2. Dodaj elementy WAI-ARIA
+#### 1. Rewrite the page to use semantic HTML tags
+Download the starter files [here](/module01-starter.zip).
+
+#### 2. *(optional)* Add `aria` tags where appropriate

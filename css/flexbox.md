@@ -1,6 +1,6 @@
 # Flexbox
 
-Flexbox is the modern alternative to `floats` when in comes to building layouts. 
+Flexbox is the modern alternative to `floats` when in comes to building layouts.
 It gives us complete control on how the elements are positioned, aligned,
 what size they are, and how they behave when the page is resized.
 
@@ -20,7 +20,7 @@ what size they are, and how they behave when the page is resized.
 </style>
 ```
 
-The flex container is an element that defines the *flex context* - how the elements inside are positioned, the spacing around them and their orienation.
+The flex container is an element that defines the *flex context* - how the elements inside are positioned, the spacing around them and their orientation.
 
 ## Flex items orientation
 
@@ -42,8 +42,8 @@ Flex items can be organized in rows and columns, with option to reverse them, us
 ## Main axis alignment
 
 Main axis is the main direction of flex items:
-- left-to-right for `flex-direction: row`, 
-- right-to-left for `flex-direction: row-reverse`, 
+- left-to-right for `flex-direction: row`,
+- right-to-left for `flex-direction: row-reverse`,
 - top-to-bottom for `flex-direction: column`,
 - bottom-to-top for `flex-direction: column-reverse`,
 
@@ -63,6 +63,8 @@ Valid values:
 }
 ```
 
+[](codepen://maciej-kucharski/jQWPPz)
+
 ## Cross axis alignment
 
 Cross axis alignment of elements can be defined used the `align-items` property -
@@ -71,10 +73,10 @@ works the same as the `justify-content`, but in the perpendicular direction.
 - `flex-start` (default),
 - `flex-end`,
 - `center`,
-- `space-around`,
-- `space-between`
+- `baseline`,
 - `stretch`
 
+[](codepen://maciej-kucharski/MzKwbZ)
 
 ## Read more
 

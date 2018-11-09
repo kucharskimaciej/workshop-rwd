@@ -1,7 +1,7 @@
 # Media queries
 
 Media queries let you apply different styles to an element based on device size, orientation, type, and pixel density.
-The media query is, in essence, an `if` statement about the browser/device properties: 
+The media query is, in essence, an `if` statement about the browser/device properties:
 if the statement evaluates to `true`, the styles inside will be applied:
 
 ```scss
@@ -9,6 +9,16 @@ if the statement evaluates to `true`, the styles inside will be applied:
   // styles to apply
 }
 ```
+
+### The viewport meta tag
+
+Before media queries can be used, the browser needs to know how to control the page dimensions and scaling.
+The tag's content may contain a number of properties, but using most of them is not recommended. Here's the standard version for a responsive page:
+
+```html
+<meta name="viewport" content="width=device-width,initial-scale=1">
+```
+
 
 ### Media type
 
@@ -29,7 +39,7 @@ Describes a general category of the device that displays the page:
 @media (min-width: 640px) { ... }
 ```
 
-Describe the size of the browser window: `width`, `height`. 
+Describe the size of the browser window: `width`, `height`.
 Can be modified with `min-` and `max-` prefixes (`min-width`, `min-height`, `max-width`, `max-height`)
 
 
@@ -47,6 +57,7 @@ Can be modified with `min-` and `max-` prefixes (`min-width`, `min-height`, `max
 
 ## Read more
 
+- [Responsive Web Design Basics](https://developers.google.com/web/fundamentals/design-and-ux/responsive/)
 - [CSS Media Queries & Using Available Space | CSS-Tricks](https://css-tricks.com/css-media-queries/)
 - [Using media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 - [Media Queries](https://mediaqueri.es/)

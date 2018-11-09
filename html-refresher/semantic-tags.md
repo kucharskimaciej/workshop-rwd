@@ -20,7 +20,7 @@
 * `footer`
 	* defines a footer for a document/`section`/`article`
 
-### Elementy dot. zawartości
+### Content elements
 * `main`
 	* main part of the content
 	* applies both the the whole document and any `article`s/`section`s
