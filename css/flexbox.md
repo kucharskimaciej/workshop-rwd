@@ -78,6 +78,12 @@ works the same as the `justify-content`, but in the perpendicular direction.
 
 [](codepen://maciej-kucharski/MzKwbZ)
 
+## Tasks
+
+[](codepen://t-i-m-i/wQWOXX)
+[](codepen://t-i-m-i/qQNvVZ)
+[](codepen://t-i-m-i/yQJwKr)
+
 ## Read more
 
 - [Flexbox Froggy - A game for learning CSS flexbox](https://flexboxfroggy.com/)

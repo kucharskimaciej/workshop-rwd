@@ -10,8 +10,8 @@ h1 {
 }
 ```
 
-`h1` is a selector, `color` is a property with `red` as its value. 
-Similarly `border` is a property, but it's a short-hand - shortcut to writing multiple properties. 
+`h1` is a selector, `color` is a property with `red` as its value.
+Similarly `border` is a property, but it's a short-hand - shortcut to writing multiple properties.
 `1px solid black` are the values of abbreviated properties.
 
 ## Basic selectors
@@ -72,7 +72,7 @@ a[href^="http" i] {}
 ```
 
 - `a[title]` selects all links that have a title attribute (even if it's empty).
-- `input[type="text"]` selects text inputs 
+- `input[type="text"]` selects text inputs
 - `a[href^="#"]` selects the links that start with `#` character (i.e. internal links)
 - `a[href^="http" i]` selects links that start with `http`, ignoring the case (*Http*, *http*, *HTTP*, etc)
 
@@ -111,3 +111,7 @@ a[target="_blank"]::after {
 ```
 
 The above code will add an arrow to all links that open in new tab.
+
+## Tasks
+
+[](codepen://t-i-m-i/xQVNJo)

@@ -38,6 +38,10 @@ header {
 }
 ```
 
+## Tasks
+
+[](codepen://t-i-m-i/YRWZBB)
+
 ## Further reading
 
 - [Inheritance - CSS: Cascading Style Sheets | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance)

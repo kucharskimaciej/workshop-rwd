@@ -33,5 +33,3 @@
     * [Mixins](./sass/mixins.md)
     * [Flow control and lists](./sass/advanced-features.md)
     * [Tasks](./sass/tasks.md)
-* [Boostrap](./html-refresher/README.md)
-    * [Tasks](./html-refresher/semantic-tags.md)
