@@ -1,0 +1,162 @@
+<html>
+<head>
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/grid.css">
+    <link rel="stylesheet" href="./styles/hero.css">
+    <link rel="stylesheet" href="./styles/page.css">
+    <link rel="stylesheet" href="./styles/product.css">
+    <link rel="stylesheet" href="./styles/button.css">
+</head>
+<body class="page">
+    <header class="page__header">
+        <h1 class="page__header__logo">
+            Company
+        </h1>
+
+        <nav class="page__header__nav">
+            <a class="page__header__nav__item" href="#">Home</a>
+            <a class="page__header__nav__item" href="#">Products</a>
+            <a class="page__header__nav__item" href="#">Cart</a>
+            <a class="page__header__nav__item" href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main class="page__container">
+        <article class="hero" data-mobile-src="" style="background-image: url('https://placeimg.com/1400/600/tech?rand=hero')">
+            <header class="hero__header">
+                <h2 class="hero__product-name">Awesum product for $5</h2>
+                <p class="hero__product-description">
+                    Sed cursus placerat magna vitae aliquam. Sed et augue quam. Donec at ipsum erat. Donec accumsan est mauris, quis gravida ex consequat et.
+                </p>
+            </header>
+
+            <footer class="hero__cta">
+                <button class="button button--large button--cta">
+                    Add to card
+                </button>
+            </footer>
+        </article>
+
+        <article class="product product--featured">
+            <img class="product__picture" src="https://placeimg.com/400/400/tech?rand=1">
+            <section class="product__details">
+                <h2 class="product__name">Product 1</h2>
+                <p class="product__description">Lorem ipsum dolor sit</p>
+            </section>
+
+            <section class="product__buy">
+                <span class="product__price">160$</span>
+                <button class="button button--cta">Add to cart</button>
+            </section>
+        </article>
+
+        <article class="product product--featured">
+            <img class="product__picture" src="https://placeimg.com/400/400/tech?rand=2">
+            <section class="product__details">
+                <h2 class="product__name">Product 1</h2>
+                <p class="product__description">Lorem ipsum dolor sit</p>
+            </section>
+
+            <section class="product__buy">
+                <span class="product__price">160$</span>
+                <button class="button button--cta">Add to cart</button>
+            </section>
+        </article>
+
+        <section class="products">
+            <div class="row">
+                <div class="column-1">
+                    <article class="product" style="background-image: url('https://placeimg.com/400/400/tech?rand=3')">
+                        <h2 class="product__name">Product 1</h2>
+                        <span class="product__price">$20</span>
+                    </article>
+                </div>
+                <div class="column-1">
+                    <article class="product" style="background-image: url('https://placeimg.com/400/400/tech?rand=4')">
+                        <h2 class="product__name">Product 1</h2>
+                        <span class="product__price">$20</span>
+                    </article>
+                </div>
+                <div class="column-1">
+                    <article class="product" style="background-image: url('https://placeimg.com/400/400/tech?rand=5')">
+                        <h2 class="product__name">Product 1</h2>
+                        <span class="product__price">$20</span>
+                    </article>
+                </div>
+                <div class="column-1">
+                    <article class="product" style="background-image: url('https://placeimg.com/400/400/tech?rand=6')">
+                        <h2 class="product__name">Product 1</h2>
+                        <span class="product__price">$20</span>
+                    </article>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column-2">
+                    <article class="product product--special" style="background-image: url('https://placeimg.com/700/700/tech?rand=7')">
+                        <section class="product__details">
+                            <h2 class="product__name">Product 1</h2>
+                            <p class="product__description">Lorem ipsum dolor sit</p>
+                        </section>
+                        <span class="product__price">$20</span>
+                    </article>
+                </div>
+
+                <div class="column-2">
+                    <div class="row">
+                        <div class="column-2">
+                            <article class="product" style="background-image: url('https://placeimg.com/400/400/tech?rand=9')">
+                                <h2 class="product__name">Product 1</h2>
+                                <span class="product__price">$20</span>
+                            </article>
+                        </div>
+
+                        <div class="column-2">
+                            <article class="product" style="background-image: url('https://placeimg.com/400/400/tech?rand=10')">
+                                <h2 class="product__name">Product 1</h2>
+                                <span class="product__price">$20</span>
+                            </article>
+                        </div>
+
+                        <div class="column-2">
+                            <article class="product" style="background-image: url('https://placeimg.com/400/400/tech?rand=11')">
+                                <h2 class="product__name">Product 1</h2>
+                                <span class="product__price">$20</span>
+                            </article>
+                        </div>
+
+                        <div class="column-2">
+                            <article class="product" style="background-image: url('https://placeimg.com/400/400/tech?rand=12')">
+                                <h2 class="product__name">Product 1</h2>
+                                <span class="product__price">$20</span>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page__footer">
+        <div class="page__container">
+            <div class="row">
+                <div class="column-1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi scelerisque eu libero a suscipit. </p>
+                </div>
+
+                <div class="column-1">
+                    <p>Curabitur et hendrerit ante, sollicitudin consequat nisi. In hac habitasse platea dictumst. Fusce vel mi viverra, imperdiet felis non, pharetra turpis.</p>
+                </div>
+
+                <div class="column-1">
+                    <p>Nam malesuada lacus eget bibendum faucibus. Nullam sapien nunc, laoreet vitae nibh sit amet, suscipit tempor urna.</p>
+                </div>
+
+                <div class="column-1">
+                    <p>Suspendisse euismod, justo eget tempus malesuada, purus dui vehicula sapien, in lacinia nibh ex nec turpis.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

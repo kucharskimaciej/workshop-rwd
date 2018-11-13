@@ -1,0 +1,32 @@
+.row {
+    margin: 0 -5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.column-1,
+.column-2,
+.column-3,
+.column-4 {
+    padding: 0 5px;
+}
+
+.column-1 {
+    width: 25%;
+}
+
+.column-2 {
+    width: 50%;
+}
+
+.column-3 {
+    width: 75%;
+}
+
+.column-4 {
+    width: 100%;
+}
+[class^=column] {
+   margin-bottom: 10px;
+}
