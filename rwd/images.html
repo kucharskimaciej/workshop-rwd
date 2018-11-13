@@ -594,6 +594,38 @@
 <li>the cropping problem (aka art direction problem),</li>
 <li>and the resolution scaling problem (aka device pixel ratio problem)</li>
 </ul>
+<h2 id="the-minimum-solution">The minimum solution</h2>
+<p>Make the image scale with the size of its parent:</p>
+<pre><code class="lang-scss"><span class="hljs-selector-class">.responsive-image</span> {
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+}
+</code></pre>
+<p>This solution doesn&apos;t really solve any of the problems above, but at least the image doesn&apos;t break the layout.</p>
+<h2 id="using-background">Using background</h2>
+<p>Instead of using an image, the background-image will be used. This allows for finer control over the image with CSS and/or JS:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;image&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-css"><span class="hljs-selector-class">.image</span> {
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">&apos;https://placeimg.com/640/480/any&apos;</span>);
+}
+
+@<span class="hljs-keyword">media</span> (max-width: <span class="hljs-number">640px</span>) {
+    <span class="hljs-selector-class">.image</span> {
+        <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">&apos;https://placeimg.com/320/240/any&apos;</span>)
+    }
+}
+</code></pre>
+<p>Pros:</p>
+<ul>
+<li>solves all the above problems</li>
+</ul>
+<p>Cons </p>
+<ul>
+<li>it&apos;s hard to generate this code automatically</li>
+<li>it&apos;s hard to keep the image in correct proportions</li>
+<li>bad for SEO and screen readers</li>
+</ul>
 <h2 id="using-the-srcset-attribute">Using the <code>srcset</code> attribute</h2>
 <p>The <code>srcset</code> let&apos;s you define list of sources for the <code>&lt;img&gt;</code> tag and
 have the browser decide which to use based on the device pixel-ratio:</p>
@@ -670,7 +702,7 @@ The browser then runs the following calculations (assumed device width: 400px) t
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Responsive images","level":"1.4.5","depth":2,"next":{"title":"Responsive tables","level":"1.4.6","depth":2,"path":"rwd/tables.md","ref":"./rwd/tables.md","articles":[]},"previous":{"title":"Mobile first","level":"1.4.4","depth":2,"path":"rwd/mobile-first.md","ref":"./rwd/mobile-first.md","articles":[]},"dir":"ltr"},"config":{"plugins":["codepen"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"codepen":{"height":400},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Maciej Kucharski","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Szkolenie HTML/CSS/RWD - Devmeetings","gitbook":"*"},"file":{"path":"rwd/images.md","mtime":"2018-07-15T13:27:19.869Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-12T06:53:32.420Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Responsive images","level":"1.4.5","depth":2,"next":{"title":"Responsive tables","level":"1.4.6","depth":2,"path":"rwd/tables.md","ref":"./rwd/tables.md","articles":[]},"previous":{"title":"Mobile first","level":"1.4.4","depth":2,"path":"rwd/mobile-first.md","ref":"./rwd/mobile-first.md","articles":[]},"dir":"ltr"},"config":{"plugins":["codepen"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"codepen":{"height":400},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Maciej Kucharski","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Szkolenie HTML/CSS/RWD - Devmeetings","gitbook":"*"},"file":{"path":"rwd/images.md","mtime":"2018-11-13T09:03:53.369Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-13T09:24:52.451Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
