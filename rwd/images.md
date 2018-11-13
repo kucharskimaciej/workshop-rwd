@@ -5,6 +5,47 @@ Displaying images on different devices comes with three problems:
  - the file size problem,
  - the cropping problem (aka art direction problem),
  - and the resolution scaling problem (aka device pixel ratio problem)
+
+## The minimum solution
+
+Make the image scale with the size of its parent:
+
+```scss
+.responsive-image {
+    display: block;
+    max-width: 100%;
+}
+```
+
+This solution doesn't really solve any of the problems above, but at least the image doesn't break the layout.
+
+## Using background
+
+Instead of using an image, the background-image will be used. This allows for finer control over the image with CSS and/or JS:
+
+```html
+<div class="image"></div>
+```
+
+```css
+.image {
+    background-image: url('https://placeimg.com/640/480/any');
+}
+
+@media (max-width: 640px) {
+    .image {
+        background-image: url('https://placeimg.com/320/240/any')
+    }
+}
+```
+
+Pros:
+- solves all the above problems
+
+Cons 
+- it's hard to generate this code automatically
+- it's hard to keep the image in correct proportions
+- bad for SEO and screen readers
  
 ## Using the `srcset` attribute
 

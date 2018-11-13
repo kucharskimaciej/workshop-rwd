@@ -55,6 +55,9 @@ Can be modified with `min-` and `max-` prefixes (`min-width`, `min-height`, `max
 - `orientation: portrait`: the device is taller than it's wide
 - `aspect-ratio: width/height`: ratio of device width to it's height. Can be prefixed with `min-` and `max-`.
 
+## Tasks
+[](codepen://maciej-kucharski/MzJyKy)
+
 ## Read more
 
 - [Responsive Web Design Basics](https://developers.google.com/web/fundamentals/design-and-ux/responsive/)
