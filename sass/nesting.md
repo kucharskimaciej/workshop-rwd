@@ -31,7 +31,7 @@ a common practice is to keep it at maximum 3 or 4 - selectors like that may resu
 
 ## The `&` operator
 
-The `&` symbol tells Sass to repeat the whole parent selector. 
+The `&` symbol tells Sass to repeat the whole parent selector.
 This way you can chain classes using the nesting syntax:
 
 ```scss
@@ -62,7 +62,7 @@ It can also be used to style the element differently based on a class higher-up 
   body.page--wide & {
     width: 80%;
   }
-  
+
   // modernizr flag
   .no-js & {
     display: none;
@@ -75,6 +75,12 @@ It can also be used to style the element differently based on a class higher-up 
  */
 
 ```
+
+## Tasks
+
+**Hint** Either use the codepen or copy the code over to the [playground](https://www.sassmeister.com/)
+
+[](codepen://maciej-kucharski/BGWWyR)
 
 ## Read more
 - [Beware of Selector Nesting in Sass — SitePoint](https://www.sitepoint.com/beware-selector-nesting-sass/)

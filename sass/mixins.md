@@ -8,7 +8,7 @@ The mixin directive syntax is very similar to that of a function:
 ```scss
 @mixin mixin-name([...arguments]) {
   property: value;
-  
+
   selector {
     property: value;
   }
@@ -61,6 +61,25 @@ Using the `@content` you can pass css properties to a mixin.
     color: #f8f8f8;
   }
 }
+```
+
+## Tasks
+
+**Hint** code and test in the [playground](https://www.sassmeister.com/)
+
+1. Create a mixin that outputs a code for configurable flex element: allow changing direction, wrapping and content alignment
+2. Create a mixin that wraps your code in a media query:
+
+```scss
+@include phones {
+    // my code
+}
+
+/*
+@media screen and (max-width: 40rem) {
+    // my code
+}
+*/
 ```
 
 ## Read more

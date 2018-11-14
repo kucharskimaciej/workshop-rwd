@@ -1,4 +1,8 @@
 # Tasks
+**Hint** [Install Sass first](https://sass-lang.com/install)!
+Recommendations: command line with npm or ScoutApp.
+
+**Hint** [Quick playground](https://www.sassmeister.com/) to test your Sass.
 
 #### 0. Setup SCSS compilation and convert all the `.css` files to `.scss` (or `.sass`)
 #### 1. Replace all hardcoded values in the project with SASS variables
