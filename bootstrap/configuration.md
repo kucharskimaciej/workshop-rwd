@@ -36,25 +36,23 @@ Bootstrap's [`bootstrap.scss` file](https://github.com/twbs/bootstrap/blob/9201a
 **Ignore that file**. Create a custom import file, and only import components/parts that are really needed:
 
 ```scss
-$path-to-bootstrap: '.../bootstrap/scss/';
-
-@import "#{$path-to-bootstrap}functions";
-@import "#{$path-to-bootstrap}variables";
-@import "#{$path-to-bootstrap}mixins";
-@import "#{$path-to-bootstrap}root";
-@import "#{$path-to-bootstrap}reboot";
-@import "#{$path-to-bootstrap}type";
-@import "#{$path-to-bootstrap}images";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
 // @import "code"; -- not imported
-@import "#{$path-to-bootstrap}grid";
-@import "#{$path-to-bootstrap}tables";
-@import "#{$path-to-bootstrap}forms";
-@import "#{$path-to-bootstrap}buttons";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/tables";
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/buttons";
 // @import "transitions"; -- no animations needed
-@import "#{$path-to-bootstrap}dropdown";
+@import "../node_modules/bootstrap/scss/dropdown";
 // @import "button-group"; -- not even once
-@import "#{$path-to-bootstrap}input-group";
-@import "#{$path-to-bootstrap}custom-forms";
+@import "../node_modules/bootstrap/scss/input-group";
+@import "../node_modules/bootstrap/scss/custom-forms";
 ```
 
 ## Theme
@@ -62,7 +60,7 @@ $path-to-bootstrap: '.../bootstrap/scss/';
 The above file links to [`_variables.scss`](https://github.com/twbs/bootstrap/blob/9201a805101943f9ec088639d520d7d2874bbed1/scss/_variables.scss)
 
 ```scss
-@import "#{$path-to-bootstrap}variables";
+@import "../node_modules/bootstrap/scss/variables";
 ```
 
 Instead of using variables straight from bootstrap,
