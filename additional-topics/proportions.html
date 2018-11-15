@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Accessiblity: ARIA · Szkolenie HTML/CSS/RWD - Devmeetings</title>
+        <title>Aspect ratio · Szkolenie HTML/CSS/RWD - Devmeetings</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="tasks.html" />
     
-    
-    <link rel="prev" href="semantic-tags.html" />
+    <link rel="prev" href="triangles.html" />
     
 
     </head>
@@ -102,9 +100,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="../html-refresher/">
             
-                <a href="./">
+                <a href="../html-refresher/">
             
                     
                     HTML refresher
@@ -116,9 +114,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="semantic-tags.html">
+        <li class="chapter " data-level="1.2.1" data-path="../html-refresher/semantic-tags.html">
             
-                <a href="semantic-tags.html">
+                <a href="../html-refresher/semantic-tags.html">
             
                     
                     Semantic tags
@@ -129,9 +127,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.2" data-path="aria.html">
+        <li class="chapter " data-level="1.2.2" data-path="../html-refresher/aria.html">
             
-                <a href="aria.html">
+                <a href="../html-refresher/aria.html">
             
                     
                     Accessiblity: ARIA
@@ -142,9 +140,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="tasks.html">
+        <li class="chapter " data-level="1.2.3" data-path="../html-refresher/tasks.html">
             
-                <a href="tasks.html">
+                <a href="../html-refresher/tasks.html">
             
                     
                     Tasks
@@ -639,9 +637,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="../additional-topics/">
+        <li class="chapter " data-level="1.7" data-path="./">
             
-                <a href="../additional-topics/">
+                <a href="./">
             
                     
                     Additional CSS Topics
@@ -653,9 +651,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="../additional-topics/triangles.html">
+        <li class="chapter " data-level="1.7.1" data-path="triangles.html">
             
-                <a href="../additional-topics/triangles.html">
+                <a href="triangles.html">
             
                     
                     Triangles
@@ -666,9 +664,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="../additional-topics/proportions.html">
+        <li class="chapter active" data-level="1.7.2" data-path="proportions.html">
             
-                <a href="../additional-topics/proportions.html">
+                <a href="proportions.html">
             
                     
                     Aspect ratio
@@ -714,7 +712,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Accessiblity: ARIA</a>
+        <a href=".." >Aspect ratio</a>
     </h1>
 </div>
 
@@ -729,42 +727,12 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="aria">ARIA</h1>
-<p>ARIA stands for <em>Accessible Rich Internet Applications</em>. It&apos;s a set of attributes that can be added to
-HTML elements with goal of improving the website accessibility by clearly communicating role, state or other properties of the element.</p>
-<h2 id="aria-landmark-roles">ARIA landmark roles</h2>
-<p>Identify the purpose the element serves, more than just the element tag.</p>
-<ul>
-<li><code>role=&quot;banner&quot;</code> contains main heading/title of the page &#x2014; used on <code>header</code> element. One per page.</li>
-<li><code>role=&quot;complementary&quot;</code> &#x2014; additional section of the page, used on <code>aside</code> element</li>
-<li><code>role=&quot;contentinfo&quot;</code> &#x2014; element that contains additional information about the document content. One per page, typically on a <code>footer</code> element</li>
-<li><code>role=&quot;form&quot;</code> &#x2014; element that contains form control; do not use on actual <code>form</code> element, but rather on containers for standalone controls</li>
-<li><code>role=&quot;main&quot;</code> the main content of the component; usually on the <code>main</code> element. One per page</li>
-<li><code>role=&quot;navigation&quot;</code> contains links/other navigation elements. Usually on <code>nav</code> element</li>
-<li><code>role=&quot;search&quot;</code> search for the document; typically a form</li>
-</ul>
-<h2 id="other-aria-role-attributes">Other ARIA role attributes</h2>
-<ul>
-<li><code>role=&quot;button&quot;</code> mark elements other than <code>&lt;button&gt;</code> as buttons. Sometimes useful<ul>
-<li>Elements marked with this role can also use <code>aria-pressed</code> attribute to signify the button state (ie. toggle buttons)</li>
-<li>should have <code>aria-label</code> or <code>aria-labelledby</code> attribute, especially if content doesn&#x2019;t describe the action well (ie. close button with &#x2018;x&#x2019; as a content)</li>
-</ul>
-</li>
-<li><code>role=&#x201C;combobox&#x201D;</code>, <code>role=&#x201C;listbox&#x201D;</code>  mark elements that allow to select options, that are not standard <code>&lt;select&gt;</code> &#x2014; ie. typeahead, custom dropdown implementation</li>
-<li><code>role=&#x201C;option&#x201D;</code> use within the above; mark an option of a custom dropdown.</li>
-<li><code>role=&#x201C;dialog&#x201D;</code> custom modals</li>
-<li><code>role=&#x201C;checkbox&#x201D;</code>, <code>role=&#x201C;radio&#x201D;</code> custom elements that represent checkboxes and radio buttons. <code>aria-checked</code> attribute to provide the state of the element</li>
-<li><code>role=&#x201C;toolip&#x201D;</code></li>
-</ul>
-<h2 id="further-reading">Further reading</h2>
-<ul>
-<li><a href="https://www.w3.org/WAI/PF/aria/roles" target="_blank">The Roles Model | Accessible Rich Internet Applications (WAI-ARIA) 1.0</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques" target="_blank">Using ARIA - Accessibility | MDN</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute" target="_blank">Using the aria-label attribute - Accessibility | MDN</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute" target="_blank">Using the aria-labelledby attribute - Accessibility | MDN</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role" target="_blank">Using the button role - Accessibility | MDN</a></li>
-<li><a href="https://www.sitepoint.com/how-to-use-aria-effectively-with-html5/" target="_blank">How to Use ARIA Effectively with HTML5 &#x2014; SitePoint</a></li>
-</ul>
+                                <h1 id="aspect-ratio">Aspect ratio</h1>
+<p>Keeping the same proportions for fluid width elements is hard with just media queries.
+This tricks depends on interesting behavior of the <code>padding</code> property:</p>
+<blockquote>
+<p>The size of the padding as a percentage, relative to the <strong>width</strong> of the containing block.</p>
+</blockquote>
 
                                 
                                 </section>
@@ -792,14 +760,10 @@ HTML elements with goal of improving the website accessibility by clearly commun
 
             
                 
-                <a href="semantic-tags.html" class="navigation navigation-prev " aria-label="Previous page: Semantic tags">
+                <a href="triangles.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Triangles">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="tasks.html" class="navigation navigation-next " aria-label="Next page: Tasks">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -808,7 +772,7 @@ HTML elements with goal of improving the website accessibility by clearly commun
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Accessiblity: ARIA","level":"1.2.2","depth":2,"next":{"title":"Tasks","level":"1.2.3","depth":2,"path":"html-refresher/tasks.md","ref":"./html-refresher/tasks.md","articles":[]},"previous":{"title":"Semantic tags","level":"1.2.1","depth":2,"path":"html-refresher/semantic-tags.md","ref":"./html-refresher/semantic-tags.md","articles":[]},"dir":"ltr"},"config":{"plugins":["codepen"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"codepen":{"height":400},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Maciej Kucharski","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Szkolenie HTML/CSS/RWD - Devmeetings","gitbook":"*"},"file":{"path":"html-refresher/aria.md","mtime":"2018-07-09T17:35:48.267Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-15T10:56:55.706Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Aspect ratio","level":"1.7.2","depth":2,"previous":{"title":"Triangles","level":"1.7.1","depth":2,"path":"additional-topics/triangles.md","ref":"./additional-topics/triangles.md","articles":[]},"dir":"ltr"},"config":{"plugins":["codepen"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"codepen":{"height":400},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Maciej Kucharski","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Szkolenie HTML/CSS/RWD - Devmeetings","gitbook":"*"},"file":{"path":"additional-topics/proportions.md","mtime":"2018-11-15T10:34:42.378Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-15T10:56:55.706Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
